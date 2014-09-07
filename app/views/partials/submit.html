@@ -1,0 +1,164 @@
+<div class="modal-header">
+    <h1>Use your knowledge ..</h1>
+</div>
+<div class="modal-body">
+         <div class="well well-sm">
+            <form class="form-horizontal" action="" method="post">
+                <fieldset>
+                    <!-- Name input-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Has Hair</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.hair"
+                                    ng-options='option.value as option.name for option in options'>
+                            </select>
+                            <!-- <input id="hair" name="hair" ng-model="newAnimal.hair" type="text" placeholder="Your name" class="form-control">-->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Has Feathers</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.feathers"
+                                    ng-options='option.value as option.name for option in options'>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Gives Egg</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.eggs"
+                                    ng-options='option.value as option.name for option in options'>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Gives milk</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.milk"
+                                    ng-options='option.value as option.name for option in options'>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Is Airborne</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.airborne"
+                                    ng-options='option.value as option.name for option in options'>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Is Aquatic</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.aquatic"
+                                    ng-options='option.value as option.name for option in options'>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Is Predator</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.predator"
+                                    ng-options='option.value as option.name for option in options'>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Is Toothed</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.toothed"
+                                    ng-options='option.value as option.name for option in options'>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Has Backbone</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.backbone"
+                                    ng-options='option.value as option.name for option in options'>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Breathes</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.breathes"
+                                    ng-options='option.value as option.name for option in options'>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Is Venomous</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.venomous"
+                                    ng-options='option.value as option.name for option in options'>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Has Fins</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.fins"
+                                    ng-options='option.value as option.name for option in options'>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Number of Legs</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.legs"
+                                    ng-options='option.value as option.name for option in legOptions'>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Has Tail</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.tail"
+                                    ng-options='option.value as option.name for option in options'>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Is Domestic</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.domestic"
+                                    ng-options='option.value as option.name for option in options'>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Cat Size</label>
+                        <div class="col-md-9">
+                            <select
+                                    ng-model="newAnimal.catsize"
+                                    ng-options='option.value as option.name for option in options'>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Form actions -->
+
+                </fieldset>
+            </form>
+        </div>
+
+</div>
+<div class="modal-footer">
+    <button ng-click="save()" class="btn btn-primary" >Save</button>
+    <button ng-click="close()" class="btn" >close</button>
+</div>

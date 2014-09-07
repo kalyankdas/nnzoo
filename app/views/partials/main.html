@@ -1,0 +1,66 @@
+<div ng-include="'partials/navbar'"></div>
+<!-- Add your site or application content here -->
+
+<div class="container-fluid" >
+           <div class="row">
+                <div>
+                    <table id="mytable" class="table table-bordered table-striped">
+                        <thead>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Has Hair</th>
+                            <th>Has Feathers</th>
+                            <th>Gives Eggs</th>
+                            <th>Gives milk</th>
+                            <th>Is airborne</th>
+                            <th>Is aquatic</th>
+                            <th>Is predator</th>
+                            <th>Is Toothed</th>
+                            <th>Has Backbone</th>
+                            <th>Breathes</th>
+                            <th>Venomous</th>
+                            <th>Has fins</th>
+                            <th>Has legs</th>
+                            <th>Has tail</th>
+                            <th>Is domestic</th>
+                            <th>Is Cat</th>
+                            <th>Is Cat</th>
+                            <th>Type</th>
+
+
+                        </thead>
+                        <tbody ng-repeat="animal in animals">
+                            <tr>
+                                <td style="width:250px; height:250px; background-color:red;text-align:center; vertical-align:middle"><img ng-src="{{animal.mediaurl}}"/></td>
+                                <td><strong>{{animal.name}}</strong></td>
+                                <td>Has Hair: {{animal.hair}}</td>
+                                <td>Has Feathers:{{animal.feathers}}</td>
+                                <td>Gives Eggs:{{animal.eggs}}</td>
+                                <td>Gives milk:{{animal.milk}}</td>
+                                <td>Is airborne:{{animal.airborne}}</td>
+                                <td>Is aquatic:{{animal.aquatic}}</td>
+                                <td>Is predator:{{animal.predator}}</td>
+                                <td>Is Toothed:{{animal.toothed}}</td>
+                                <td>Has Backbone:{{animal.backbone}}</td>
+                                <td>Breathes:{{animal.breathes}}</td>
+                                <td>Venomous:{{animal.venomous}}</td>
+                                <td>Has fins:{{animal.fins}}</td>
+                                <td>Has legs:{{animal.legs}}</td>
+                                <td>Has tail:{{animal.tail}}</td>
+                                <td>Is domestic:{{animal.domestic}}</td>
+                                <td>Is Cat:{{animal.catsize}}</td>
+                                <td>{{animal.mediaurl}}</td>
+                                <td>Type:{{animal.type}}</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    
+
+ </div>
+
+<div class="footer">
+ 
+</div>

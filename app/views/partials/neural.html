@@ -1,0 +1,45 @@
+﻿<div class="container">
+    <div class="row">
+        <h4>Class# -- Set of animals:</h4>
+
+        <ul class="list-group" ng-repeat="group in groups">
+
+            <li class="list-group-item">
+                <div class="col-xs-12 col-sm-3">
+                    <img ng-src="{{group.image}}"  class="img-responsive img-circle" />
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                    <span class="name">{{group.name}}</span><br/>
+               <span class="text-muted">{{group.members}}</span>
+                </div>
+                <div class="col-xs-12 col-sm-3" ng-show="group.selected">
+                    <img ng-src="/images/checkmark.png"  />
+                </div>
+                <div class="clearfix"></div>
+
+            </li>
+         </ul>
+
+
+    </div>
+</div>
+<div class="row top-buffer" >
+    <div class="col-md-6 col-md-offset-3">
+        <button ng-click="submit()" class="btn btn-primary btn-lg pull-right">Test new animal</button>
+    </div>
+
+</div>
+
+<div class="row top-buffer" >
+    <div class="col-md-6 col-md-offset-3">
+        <pre>{{getAnimalJson()}}}}</pre>
+    </div>
+</div>
+
+<div class="row" >
+    <div class="col-md-12">
+    <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+     </div>
+</div>
+
+</div>
