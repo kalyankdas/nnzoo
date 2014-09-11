@@ -118,16 +118,28 @@ angular.module('nnanimalsApp')
                 $scope.alerts.push({msg: JSON.stringify($scope.result, undefined, 2)});
                 //console.log($scope.category);
                 console.log(data);
+				$scope.showResult();
             });
-            /*  $http.post('/api/evaluate', $scope.newAnimal, config).success(function(data) {
-             $scope.result = data.output;
-
-             $scope.category = $scope.result.indexOf(Math.max.apply(null, $scope.result))+1;
-             console.log($scope.category);
-             console.log(data);
-             });*/
+        };
+		
+		$scope.showResult = function () {
+         	var modalInstance = $modal.open({
+                templateUrl: './partials/result.html',
+                controller: 'resultCtrl',
+			
+                resolve: {
+                    group: function () {
+					    
+						var groupItem = _.find($scope.groups, function (x) { return x.selected })
+						return  groupItem;
+                    }
+                    //newAnimal: $scope.newAnimal
+                }
+            });
         };
 
+		
+		
         var dialogOptions = {
             templateUrl: './partials/submit.html',
             controller: 'submitCtrl'
@@ -155,15 +167,6 @@ angular.module('nnanimalsApp')
                 // $log.info('Modal dismissed at: ' + new Date());
             });
 
-            /*
-             $modal.dialog(angular.extend(dialogOptions, {resolve: {newAnimal: angular.copy(newAnimal)}}))
-             .open()
-             .then(function(result) {
-             if(result) {
-             angular.copy(result, newAnimal);
-             }
-             newAnimal = undefined;
-             });*/
         };
 
         $scope.alerts = [
@@ -229,5 +232,13 @@ angular.module('nnanimalsApp')
                 //console.log($scope.category);
                 console.log(data);
             });
+        };
+    });
+	angular.module('nnanimalsApp')
+    .controller('resultCtrl', function ($scope, $modalInstance, group) {
+        $scope.group = group;
+		
+        $scope.close = function () {
+            $modalInstance.close(undefined);
         };
     });
