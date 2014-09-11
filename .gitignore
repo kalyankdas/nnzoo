@@ -1,8 +1,8 @@
 #node_modules
-public
+#public
 .tmp
 .sass-cache
 #app/bower_components
 heroku
 /views
-dist
+#dist
